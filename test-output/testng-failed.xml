@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Amazon]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="edge"/>
+  <parameter name="url" value="https://www.amazon.in/"/>
+  <listeners>
+    <listener class-name="com.amazon.utilities.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" name="search(failed)">
+    <classes>
+      <class name="com.amazon.search.Search">
+        <methods>
+          <include name="validate_Search"/>
+          <include name="setup"/>
+          <include name="validate_brands"/>
+        </methods>
+      </class> <!-- com.amazon.search.Search -->
+    </classes>
+  </test> <!-- search(failed) -->
+</suite> <!-- Failed suite [Amazon] -->
