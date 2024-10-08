@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+<testng-results ignored="5" total="7" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-08T22:28:14 IST" name="Amazon" finished-at="2024-10-08T22:28:30 IST" duration-ms="16069">
+  <suite started-at="2024-10-08T23:30:44 IST" name="Amazon" finished-at="2024-10-08T23:31:04 IST" duration-ms="19521">
     <groups>
     </groups>
-    <test started-at="2024-10-08T22:28:14 IST" name="search" finished-at="2024-10-08T22:28:30 IST" duration-ms="16069">
+    <test started-at="2024-10-08T23:30:44 IST" name="search" finished-at="2024-10-08T23:31:04 IST" duration-ms="19521">
+      <class name="com.amazon.search.AddToCartPage">
+        <test-method signature="validateAddToCart()[pri:0, instance:com.amazon.search.AddToCartPage@121314f7]" started-at="2024-10-08T23:30:49 IST" name="validateAddToCart" finished-at="2024-10-08T23:31:03 IST" duration-ms="14818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAddToCart -->
+      </class> <!-- com.amazon.search.AddToCartPage -->
       <class name="com.amazon.search.Search">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.search.Search@506ae4d4]" started-at="2024-10-08T22:28:14 IST" name="setup" finished-at="2024-10-08T22:28:21 IST" duration-ms="6940" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.search.Search@242b836]" started-at="2024-10-08T23:30:38 IST" name="setup" finished-at="2024-10-08T23:30:44 IST" duration-ms="6444" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,14 +29,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validate_Search()[pri:1, instance:com.amazon.search.Search@506ae4d4]" started-at="2024-10-08T22:28:21 IST" name="validate_Search" finished-at="2024-10-08T22:28:25 IST" duration-ms="3546" status="PASS">
+        <test-method signature="validate_Search()[pri:1, instance:com.amazon.search.Search@242b836]" started-at="2024-10-08T23:30:45 IST" name="validate_Search" finished-at="2024-10-08T23:30:48 IST" duration-ms="3200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validate_Search -->
-        <test-method signature="validate_brands()[pri:4, instance:com.amazon.search.Search@506ae4d4]" started-at="2024-10-08T22:28:25 IST" name="validate_brands" finished-at="2024-10-08T22:28:30 IST" depends-on-methods="com.amazon.search.Search.validate_Search" duration-ms="4110" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_brands -->
       </class> <!-- com.amazon.search.Search -->
     </test> <!-- search -->
   </suite> <!-- Amazon -->

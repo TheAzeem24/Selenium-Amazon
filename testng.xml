@@ -11,10 +11,10 @@
 <class name="com.amazon.search.Search">
 	<methods>
 	<include name="validate_Search"></include>
-	<include name="validate_brands"></include>
 	</methods>
 	
 </class>
+<class name="com.amazon.search.AddToCartPage"></class>
 </classes>
 </test>
 </suite>

@@ -8,13 +8,12 @@
   </listeners>
   <test thread-count="5" name="search(failed)">
     <classes>
-      <class name="com.amazon.search.Search">
+      <class name="com.amazon.search.AddToCartPage">
         <methods>
-          <include name="validate_Search"/>
           <include name="setup"/>
-          <include name="validate_brands"/>
+          <include name="validateAddToCart"/>
         </methods>
-      </class> <!-- com.amazon.search.Search -->
+      </class> <!-- com.amazon.search.AddToCartPage -->
     </classes>
   </test> <!-- search(failed) -->
 </suite> <!-- Failed suite [Amazon] -->

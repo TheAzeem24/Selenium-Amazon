@@ -147,5 +147,32 @@ public class AmazonWebElement {
 	{
 		return appleCheckBox;
 	}
+	
+	//add to cart button
+	@FindBy(xpath = "//div[@class='a-section a-spacing-none a-padding-none']//input[@id='add-to-cart-button']")
+	WebElement addToCartBtn;
+	
+	public WebElement getAddToCartBtn()
+	{
+		return addToCartBtn;
+	}
+	
+	//cart button
+	@FindBy(xpath ="//*[@id=\"attach-sidesheet-view-cart-button\"]/span/input")
+	WebElement cartBtn;
 
+	public WebElement getCartBtn() {
+		return cartBtn;
+	}
+	
+	//shopping cart heading
+	@FindBy(xpath ="//h2[normalize-space()='Shopping Cart']")
+	WebElement shoppingCartHeading;
+		
+		public WebElement getShoppingCartHeading()
+		{
+			return shoppingCartHeading;
+		}
+	
+		
 }

@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import com.amazon.webelement.AmazonWebElement;
@@ -26,7 +27,7 @@ public class TestBase {
 	public static JavascriptExecutor js;
 
 	@Parameters({ "browser", "url" })
-	@BeforeClass
+	@BeforeSuite
 	public void setup(String browser, String url) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver.exe");
