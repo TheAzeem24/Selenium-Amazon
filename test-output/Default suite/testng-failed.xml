@@ -10,6 +10,7 @@
           <include name="validate_SearchResult"/>
           <include name="setup"/>
           <include name="validate_ItemsPriceList"/>
+          <include name="validate_brands"/>
         </methods>
       </class> <!-- com.amazon.search.Search -->
     </classes>

@@ -1,7 +1,6 @@
 package com.amazon.search;
 
-import java.util.List;
-
+import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -53,25 +52,12 @@ public class Search extends TestBase {
 	@Test(priority = 4,dependsOnMethods = {"validate_Search"})
 	public void validate_brands()
 	{
-		WebElement SelectedBrand;
-		boolean selected = false;
-		//js.executeScript("arguments[0].scrollIntoView();", amazonWeb.getBrands());
-		amazonWeb.getBrandsSeeMore().click();
-		int brandSize = amazonWeb.getBrands().size();
-		for(int i=0;i<=brandSize-1;i++)
-		{
-			SelectedBrand = amazonWeb.getBrands().get(i);
-			String brandName = SelectedBrand.getText();
-			if(brandName.equalsIgnoreCase("Apple"))
-			{
-				amazonWeb.expWait(SelectedBrand, 5);
-				js.executeScript("arguments[0].scrollIntoView();", SelectedBrand);
-				SelectedBrand.click();
-				selected = SelectedBrand.isSelected();
-				break;
-			}
-		}
-		Assert.assertEquals(selected, true);
+		js.executeScript("arguments[0].scrollIntoView();", amazonWeb.getAppleBrand());
+		amazonWeb.getAppleBrand().click();
+		amazonWeb.expWait(amazonWeb.getAppleBrand(), 5);
+		js.executeScript("arguments[0].scrollIntoView();", amazonWeb.getAppleBrand());
+		boolean selected = amazonWeb.getAppleCheckBox().isSelected();
+		assertEquals(selected, true);
 	}
 
 	@Test(priority = 5)

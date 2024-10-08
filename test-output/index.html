@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Amazon" class="navigator-link">
-              <span class="suite-name border-failed">Amazon</span>
+              <span class="suite-name border-passed">Amazon</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Amazon" class="hide-methods failed suite-Amazon"> (hide)</a> <!-- hide-methods failed suite-Amazon -->
-                      <a href="#" panel-name="suite-Amazon" class="show-methods failed suite-Amazon"> (show)</a> <!-- show-methods failed suite-Amazon -->
-                    </span>
-                    <div class="method-list-content failed suite-Amazon">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Amazon" title="com.amazon.search.Search" class="method navigator-link" hash-for-method="validate_brands">validate_brands</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Amazon -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Amazon" title="com.amazon.search.Search" class="method navigator-link" hash-for-method="validate_Search">validate_Search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Amazon" title="com.amazon.search.Search" class="method navigator-link" hash-for-method="validate_brands">validate_brands</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Amazon -->
@@ -133,26 +124,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Amazon" class="panel Amazon">
-          <div class="suite-Amazon-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.amazon.search.Search</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validate_brands">
-                  </a> <!-- validate_brands -->
-                  <span class="method-name">validate_brands</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.amazon.search.Search.validate_brands(Search.java:77)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Amazon-class-failed -->
           <div class="suite-Amazon-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -164,6 +135,13 @@
                   <a name="validate_Search">
                   </a> <!-- validate_Search -->
                   <span class="method-name">validate_Search</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_brands">
+                  </a> <!-- validate_brands -->
+                  <span class="method-name">validate_brands</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,18 +210,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validate_Search')
+data.setCell(0, 1, 'validate_brands')
 data.setCell(0, 2, 'com.amazon.search.Search')
-data.setCell(0, 3, 4132);
+data.setCell(0, 3, 4110);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validate_brands')
+data.setCell(1, 1, 'validate_Search')
 data.setCell(1, 2, 'com.amazon.search.Search')
-data.setCell(1, 3, 633);
+data.setCell(1, 3, 3546);
 window.suiteTableData['Amazon']= { tableData: data, tableDiv: 'times-div-Amazon'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Amazon">
               </div> <!-- times-div-Amazon -->
             </div> <!-- times-div -->
@@ -287,13 +265,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">validate_Search</span>
-                <span class="method-start">6802 ms</span>
+                <span class="method-start">6957 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">validate_brands</span>
-                <span class="method-start">11416 ms</span>
+                <span class="method-start">11035 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

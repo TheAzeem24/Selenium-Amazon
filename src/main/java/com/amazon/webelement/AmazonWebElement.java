@@ -112,7 +112,7 @@ public class AmazonWebElement {
 	// 2nd page
 	@FindBy(xpath = "//span[@aria-label='Current page, page 2']")
 	WebElement secondPage;
-
+	
 	public WebElement getSecondPage() {
 		return secondPage;
 	}
@@ -130,13 +130,22 @@ public class AmazonWebElement {
 	{
 		return brands;
 	}
+	//Apple brand
+	@FindBy(xpath = "//li[@id='p_123/110955']//a[@class='a-link-normal s-navigation-item']")
+	WebElement appleBrand;
 	
-	@FindBy(xpath = "//*[@id=\"brandsRefinements\"]/ul/span/li/span/div/a/span")
-	WebElement brandsSeeMore;
-	
-	public WebElement getBrandsSeeMore()
+	public WebElement getAppleBrand()
 	{
-		return brandsSeeMore;
+		return appleBrand;
+	}
+	
+	//Apple checkBox
+	@FindBy(xpath = "//li[@id='p_123/110955']//input[@type='checkbox']")
+	WebElement appleCheckBox;
+	
+	public WebElement getAppleCheckBox()
+	{
+		return appleCheckBox;
 	}
 
 }
