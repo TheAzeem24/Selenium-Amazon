@@ -116,7 +116,7 @@ public class AmazonWebElement {
 	public WebElement getSecondPage() {
 		return secondPage;
 	}
-
+	//exp wait
 	public void expWait(WebElement locator, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.visibilityOf(locator));

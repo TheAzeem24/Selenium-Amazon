@@ -5,16 +5,20 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
@@ -25,9 +29,9 @@ public class TestBase {
 	public static WebDriver driver;
 	public static AmazonWebElement amazonWeb;
 	public static JavascriptExecutor js;
-
+	
 	@Parameters({ "browser", "url" })
-	@BeforeSuite
+	@BeforeMethod
 	public void setup(String browser, String url) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\chromedriver.exe");
@@ -36,6 +40,7 @@ public class TestBase {
 			System.setProperty("webdriver.edge.driver", "D:\\Drivers\\msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
+		
 		js = (JavascriptExecutor) driver;
 		amazonWeb = new AmazonWebElement(driver);
 		driver.manage().window().maximize();
@@ -67,7 +72,7 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-
+	@AfterTest
 	public void tearDown() {
 		driver.close();
 		driver.quit();
